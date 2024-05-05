@@ -9,15 +9,14 @@ function App() {
   date.setDate(date.getDate() + count);
 
   return (
-    <div style={{ padding: "20px" ,fontFamily:'sans-serif'}}>
+    <div className="App" style={{ padding: "20px" ,fontFamily:'sans-serif'}}>
       <div>
-        <button onClick={() => setStep((p) => p - 1)}>-</button>
-        <span>Step: {step}</span>
-        <button onClick={() => setStep(step + 1)}>+</button>
+        <input  type="range" min="0" max="10" value={step} onChange={(e)=>setStep(Number(e.target.value))} />
+        <span>{step}</span>
       </div>
       <div>
         <button onClick={() => setCount((p) => p - step)}>-</button>
-        <span>count: {count}</span>
+        <input type="number" value={count} onChange={((e)=> setCount(e.target.value))} />
         <button onClick={() => setCount(count + step)}>+</button>
       </div>
 
