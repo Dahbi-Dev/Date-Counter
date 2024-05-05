@@ -4,6 +4,9 @@ import "./App.css";
 function App() {
   const [step, setStep] = useState(1);
   const [count, setCount] = useState(0);
+  const dateA = 2024
+  const [dateB, setDateB] = useState(0)
+  
 
   const date = new Date();
   date.setDate(date.getDate() + count);
@@ -16,7 +19,7 @@ function App() {
       </div>
       <div>
         <button onClick={() => setCount((p) => p - step)}>-</button>
-        <input type="number"  onChange={((e)=> setCount(Number(e.target.value)))} />
+        <input type="text" value={count} onChange={((e)=> setCount(Number(e.target.value)))} />
         <button onClick={() => setCount(count + step)}>+</button>
       </div>
 
