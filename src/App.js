@@ -16,7 +16,7 @@ function App() {
       </div>
       <div>
         <button onClick={() => setCount((p) => p - step)}>-</button>
-        <input type="number" value={count} onChange={((e)=> setCount(Number(e.target.value)))} />
+        <input type="number"  onChange={((e)=> setCount(Number(e.target.value)))} />
         <button onClick={() => setCount(count + step)}>+</button>
       </div>
 
